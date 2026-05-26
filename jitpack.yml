@@ -1,0 +1,6 @@
+jdk:
+  - openjdk17
+before_install:
+  - sdkmanager "ndk;28.2.13676358"
+install:
+  - ./gradlew clean publishToMavenLocal -x signAndroidSharedCppReleasePublication -x signAndroidStaticCppReleasePublication -x sign
